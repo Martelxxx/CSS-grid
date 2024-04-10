@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    grid-template-rows: auto auto 1fr auto auto;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    background-image: url('../assets/galaxy.png');
+    color: #203060;
+    padding: 20px;
+}
+
+.highlight {
+    border: 2px solid #203060;
+    background-color: #ddd7e5;
+}
+
+nav {
+    grid-area: nav;
+    grid-row: 2;
+    background-color: transparent;
+    padding: 1px;
+    display: flex; 
+    justify-content: space-around; 
+    height: 23px;
+    width: 100%;
+    margin: 0 auto;
+    /* border: 3px solid #5e7390; */
+    border-radius: 10px;
+    align-items: center;
+}
+
+nav a {
+    transition: transform 0.3s ease-in-out; 
+}
+
+nav a:hover {
+    transform: scale(1.5); 
+}
+
+main {
+    grid-area: main;
+    background-color: #b8cbe1;
+    background-position: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.portfolio-item1 {
+    background-image: url('../assets/earth.png');
+    background-size: cover;
+    border: 3px solid #5e7390;
+    padding: 20px;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-item2 {
+    background-image: url('../assets/wind.png');
+    background-size: cover;    
+    border: 3px solid #5e7390;
+    padding: 20px;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-item3 {
+    background-image: url('../assets/fire.png');
+    background-size: cover;    
+    border: 3px solid #5e7390;
+    padding: 20px;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-item4 {
+    background-image: url('../assets/water.png');
+    background-size: cover;    
+    border: 3px solid #5e7390;
+    padding: 20px;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #666;
+    color: #fff;
+    padding: 20px;
+}
